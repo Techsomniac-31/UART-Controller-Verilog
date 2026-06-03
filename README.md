@@ -30,6 +30,7 @@ Start-Bit Validation: Upon detecting a falling edge on the RX line, it counts 8 
 Mid-Bit Data Capture: Shifts into the data tracking loop and samples subsequent bits exactly every 16 clock ticks (sample == 4'd15), locking data capture straight into the physical geometric center of each bit period.
 
 ## Verification and Simulation Event Timeline
+![UART Simulation Waveform](UART_Simulation_Waveform.png)
 The testbench verifies the hardware by streaming sequential data packets (8'h41 followed by 8'h55) through an internal serial loopback connection.
 
 Reset Sequence: Global hardware reset (rst) is asserted and safely de-asserted.
